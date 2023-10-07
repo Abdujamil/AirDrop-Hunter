@@ -72,6 +72,11 @@ var splide = new Splide('.splide', {
     type: 'loop',
     perPage: 19,
     perMove: 1,
+    breakpoints: {
+        960: {
+            perPage: 11, // Количество элементов при ширине экрана 960px и выше
+        },
+    }
 });
 
 splide.mount();
@@ -93,7 +98,7 @@ splide.on('click', (slide) => {
         icon.remove();
     });
 
-    
+
     activeSlide = slide.slide.querySelector('img');
     activeSlide.classList.add('active');
 
@@ -102,8 +107,8 @@ splide.on('click', (slide) => {
     fireIcon.alt = 'fire icon';
     fireIcon.classList.add('fire-icon');
     fireIcon.style.position = 'absolute';
-    fireIcon.style.top = '-5px';
-    fireIcon.style.right = '-5px';
+    fireIcon.style.top = '6px';
+    fireIcon.style.right = '10px';
     activeSlide.parentElement.appendChild(fireIcon);
 
 
