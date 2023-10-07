@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirDrop-hunter-test</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div class="container-fluid custom-bg">
+      <div class="top"><h3>This project is beta. DYOR</h3></div>
+      <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+          <a class="navbar-brand" href="#">
+            <img
+              style="height: 100%"
+              src="img/logo.png"
+              alt="logo"
+              width="100"
+              height="50"
+            />
+          </a>
+
+          <div class="navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link custom-btn-deposit" href="#">Deposit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-btn-connect" href="#"
+                  >Connect Wallet</a
+                >
+              </li>
+              <li class="nav-item menu-btn">
+                <svg
+                  width="18"
+                  height="4"
+                  viewBox="0 0 18 4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.868164 2.28915C0.868164 1.83082 1.02572 1.44768 1.34082 1.13974C1.66309 0.831797 2.08919 0.677826 2.61914 0.677826C3.14909 0.677826 3.57161 0.831797 3.88672 1.13974C4.20898 1.44768 4.37012 1.83082 4.37012 2.28915C4.37012 2.74749 4.20898 3.13063 3.88672 3.43857C3.57161 3.74651 3.14909 3.90048 2.61914 3.90048C2.08919 3.90048 1.66309 3.74651 1.34082 3.43857C1.02572 3.13063 0.868164 2.74749 0.868164 2.28915Z"
+                    fill="#000"
+                  ></path>
+                  <path
+                    d="M7.24902 2.28915C7.24902 1.83082 7.40658 1.44768 7.72168 1.13974C8.04395 0.831797 8.47005 0.677826 9 0.677826C9.52995 0.677826 9.95247 0.831797 10.2676 1.13974C10.5898 1.44768 10.751 1.83082 10.751 2.28915C10.751 2.74749 10.5898 3.13063 10.2676 3.43857C9.95247 3.74651 9.52995 3.90048 9 3.90048C8.47005 3.90048 8.04395 3.74651 7.72168 3.43857C7.40658 3.13063 7.24902 2.74749 7.24902 2.28915Z"
+                    fill="#000"
+                  ></path>
+                  <path
+                    d="M13.6299 2.28915C13.6299 1.83082 13.7874 1.44768 14.1025 1.13974C14.4248 0.831797 14.8509 0.677826 15.3809 0.677826C15.9108 0.677826 16.3333 0.831797 16.6484 1.13974C16.9707 1.44768 17.1318 1.83082 17.1318 2.28915C17.1318 2.74749 16.9707 3.13063 16.6484 3.43857C16.3333 3.74651 15.9108 3.90048 15.3809 3.90048C14.8509 3.90048 14.4248 3.74651 14.1025 3.43857C13.7874 3.13063 13.6299 2.74749 13.6299 2.28915Z"
+                    fill="#000"
+                  ></path>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container" style="max-width: 1296px">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-5 links">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a
+                  class="nav-link category-link active"
+                  href="#airdrops-content"
+                  >Airdrops</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link category-link" href="#stats-content"
+                  >Stats</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link category-link" href="#news-content">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link category-link" href="#referrals-content"
+                  >Referrals</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link category-link" href="#nodes-content"
+                  >Nodes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link category-link" href="#new-content">New</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Контент блока "Airdrops" -->
+        <div class="content" id="airdrops-content">
+          <div class="content-hide justify-content-center news-card">
+            <div class="airdrop-block col-md-6">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="airdrop-date" id="current-time"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="airdrop-details">
+                      <h3>
+                        Title - Starknet is a decentralized Validity-Rollup
+                      </h3>
+                      <p>
+                        Starknet is a decentralized Validity-Rollup (often
+                        referred to as ZK-Rollup). It operates as a Layer 2
+                        network over Ethereum. Starknet is a decentralized
+                        Validity-Rollup Starknet is a decentralized
+                        Validity-Rollup (often referred to as ZK-Rollup). It
+                        operates as a Layer 2 network over Ethereum. Starknet is
+                        a decentralized Validity-Rollup
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 text-md-end">
+                  <div
+                    class="airdrop-controls d-flex align-items-center justify-content-between"
+                  >
+                    <div class="hide-block">
+                      <span><img src="/img/hide-arr.svg" alt="hide" /></span
+                      >Hide
+                    </div>
+                    <div class="slide-indicator">
+                      1/3
+                      <span
+                        ><img src="/img/arrow-right.svg" alt="arrow-right"
+                      /></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="airdrop-icon">
+                <img
+                  src="/img/newsImage.png"
+                  alt="Airdrop Icon"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="content-show mb-lg-4">
+            <div
+              class="toggle-button d-flex align-items-center justify-content-between"
+            >
+              <div class="content-show-head">
+                <span class="arrow-icon show-block">
+                  <img src="/img/arrow-show.svg" alt="arrow-show-icon" />
+                  <button>Show</button>
+                </span>
+                <span class="separator">|</span>
+                <span class="title">AirdropHunter’s NEWS</span>
+              </div>
+              <div class="title-hide-content">
+                <span class="title-hide-content">Title</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <section class="splide" aria-label="Splide Basic HTML Example">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="/img/Venom.svg" alt="logo" data-card-index="0" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/zkSync.svg" alt="logo" data-card-index="1" />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="/img/Metamask.svg"
+                      alt="logo"
+                      data-card-index="2"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="/img/LayerZero.svg"
+                      alt="logo"
+                      data-card-index="3"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="/img/StarkNet.svg"
+                      alt="logo"
+                      data-card-index="4"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="/img/Polygon zkEVM.svg"
+                      alt="logo"
+                      data-card-index="5"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="/img/Arbitrum Nova.svg"
+                      alt="logo"
+                      data-card-index="6"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/DeBank.svg" alt="logo" data-card-index="7" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/Scroll.svg" alt="logo" data-card-index="8" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/Aleo.svg" alt="logo" data-card-index="9" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/Zora.svg" alt="logo" data-card-index="10" />
+                  </li>
+                </ul>
+                <div class="icon-container"></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="airdrops-cards-news">
+            <div
+              class="col-md-12 flex-wrap d-flex align-items-center justify-content-center gap-2"
+            >
+              <!-- Карточка 1 -->
+              <div class="card mb-4 col-md-4" data-card-index="0">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Venom.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Venom</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-1" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-1" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 2 -->
+              <div class="card mb-4 col-md-4" data-card-index="1">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/zkSync.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">zkSync</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-2" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-2" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 3 -->
+              <div class="card mb-4 col-md-4" data-card-index="2">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Metamask.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Metamask</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-3" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-3" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 4 -->
+              <div class="card mb-4 col-md-4" data-card-index="3">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/LayerZero.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">LayerZero</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-4" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-4" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 5 -->
+              <div class="card mb-4 col-md-4" data-card-index="4">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/StarkNet.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">StarkNet</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-5" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-5" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 6 -->
+              <div class="card mb-4 col-md-4" data-card-index="5">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Polygon zkEVM.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Polygon zkEVM</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-6" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-6" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 7 -->
+              <div class="card mb-4 col-md-4" data-card-index="6">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Arbitrum Nova.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Arbitrum Nova</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-7" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-7" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 8 -->
+              <div class="card mb-4 col-md-4" data-card-index="7">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/DeBank.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">DeBank</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-8" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-8" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 9 -->
+              <div class="card mb-4 col-md-4" data-card-index="8">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Scroll.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Scroll</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-9" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-9" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 10 -->
+              <div class="card mb-4 col-md-4" data-card-index="9">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Aleo.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Aleo</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-10" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-10" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+              <!-- Карточка 11 -->
+              <div class="card mb-4 col-md-4" data-card-index="10">
+                <div
+                  class="card-head d-flex align-items-center justify-content-start gap-2 mb-2"
+                >
+                  <img
+                    src="/img/Zora.svg"
+                    alt="Metamask"
+                    class="card-img-top"
+                  />
+                  <h5 class="card-title">Zora</h5>
+                </div>
+                <div class="card-body">
+                  <input type="checkbox" class="read-more-state" id="post-11" />
+
+                  <p class="card-text read-more-wrap">
+                    About this project: Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.<span
+                      id="more"
+                      class="read-more-target"
+                      >Additional information about Metamask goes here.</span
+                    >
+                  </p>
+
+                  <label for="post-11" class="read-more-trigger"></label>
+
+                  <div class="art-ai">
+                    <h5 class="mb-3">On artificial AI:</h5>
+                    <div
+                      class="art-ai-body d-flex align-items-center justify-content-start"
+                    >
+                      <div class="excp-airdrop">
+                        <p>expected airdrop</p>
+                        <p>$500 - $5 000</p>
+                      </div>
+                      <div class="probability">
+                        <p>probability</p>
+                        <p>65 %</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="table mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tariff</th>
+                        <th scope="col" class="text-end">Cost, $</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5 accounts</td>
+                        <td class="text-end">150</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>10 accounts</td>
+                        <td class="text-end">300</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>15 accounts</td>
+                        <td class="text-end">450</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>20 accounts</td>
+                        <td class="text-end">600</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>25 accounts</td>
+                        <td class="text-end">750</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                      <tr>
+                        <td>30 accounts</td>
+                        <td class="text-end">900</td>
+                        <td class="text-center"><a href="#">Detail</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-foot">
+                  <button class="card-foot-btn">Buy</button>
+                  <p>Choose a suitable tarif and click the button</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Контент блока "News" -->
+        <div class="content" id="news-content">
+          <h2>News</h2>
+          <p>Здесь вы можете найти новости и обновления.</p>
+        </div>
+
+        <!-- Контент блока "Stats" -->
+        <div class="content" id="stats-content">
+          <h2>Stats</h2>
+          <p>Здесь вы можете найти статистику и данные.</p>
+        </div>
+
+        <!-- Контент блока "Referrals" -->
+        <div class="content" id="referrals-content">
+          <h2>Referrals</h2>
+          <p>Здесь вы можете узнать о реферальной программе.</p>
+        </div>
+
+        <!-- Контент блока "Nodes" -->
+        <div class="content" id="nodes-content">
+          <h2>Nodes</h2>
+          <p>Здесь вы можете узнать о нодах.</p>
+        </div>
+
+        <!-- Контент блока "New" -->
+        <div class="content" id="new-content">
+          <h2>New</h2>
+          <p>Здесь вы можете узнать о нодах.</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
