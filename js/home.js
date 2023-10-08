@@ -29,30 +29,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".category-link").each(function () {
         var randomCount = Math.floor(Math.random() * 100);
-        $(this).append('<span class="badge rounded-circle bg-primary">' + randomCount + '</span>'); // Добавляем бейдж с рандомным числом
-    });
+        var badgeClass = randomCount % 2 === 0 ? "active-badge" : "inactive-badge"; // Определяем класс в зависимости от рандомного числа
 
-});
-
-
-$(document).ready(function () {
-
-    var titleText = $.trim($(".airdrop-details h3").text());
-    $(".title-hide-content").text(titleText);
-
-
-    $(".hide-block").click(function () {
-        $(".content-hide").fadeOut(300, function () {
-            $(".content-show").fadeIn(300);
-        });
-    });
-
-    $(".show-block").click(function () {
-        $(".content-show").fadeOut(300, function () {
-            $(".content-hide").fadeIn(300);
-        });
+        // Добавляем бейдж с рандомным числом и классом
+        $(this).append('<span class="badge rounded-circle ' + badgeClass + '">' + randomCount + '</span>');
     });
 });
+
 
 
 const updateTime = () => {
@@ -63,27 +46,54 @@ const updateTime = () => {
 
     document.getElementById('current-time').textContent = currentTime;
 };
-
 updateTime();
 setInterval(updateTime, 60000);
 
 
-var splide = new Splide('.splide', {
+var splide = new Splide('#first-slider', {
+    type: 'loop',
+    perPage: 7,
+    perMove: 1,
+    // breakpoints: {
+    //     960: {
+    //         perPage: 11,
+    //     },
+    //     620: {
+    //         perPage: 8,
+    //     },
+    //     480: {
+    //         perPage: 6,
+    //     },
+    //     360: {
+    //         perPage: 4,
+    //     },
+    // }
+});
+splide.mount();
+
+var splide = new Splide('#second-slider', {
     type: 'loop',
     perPage: 19,
     perMove: 1,
     breakpoints: {
         960: {
-            perPage: 11, // Количество элементов при ширине экрана 960px и выше
+            perPage: 11,
+        },
+        620: {
+            perPage: 8,
+        },
+        480: {
+            perPage: 6,
+        },
+        360: {
+            perPage: 4,
         },
     }
 });
-
 splide.mount();
 
+
 const iconContainer = document.querySelector('.icon-container');
-
-
 let activeSlide = null;
 
 splide.on('click', (slide) => {
@@ -123,33 +133,22 @@ document.addEventListener("DOMContentLoaded", function () {
     icons.forEach((icon) => {
         let clickCount = 0;
 
-        // Добавляем обработчик события двойного клика на иконку
         icon.addEventListener("click", function () {
             clickCount++;
 
-            // Если был двойной клик
             if (clickCount === 2) {
-                // Отображаем все карточки
                 cards.forEach((card) => {
                     card.style.display = "block";
                 });
 
-                // Снимаем выделение с иконки и убираем огонек
-                this.style.border = "none";
-                this.style.boxShadow = "none";
 
-                // Сбрасываем счетчик кликов
                 clickCount = 0;
             } else {
-                // Если был одиночный клик, показываем соответствующую карточку
                 const cardIndex = this.getAttribute("data-card-index");
 
-                // Скрываем все карточки
                 cards.forEach((card) => {
                     card.style.display = "none";
                 });
-
-                // Показываем выбранную карточку
                 if (cardIndex !== null) {
                     const selectedCard = document.querySelector(
                         `.airdrops-cards-news .card[data-card-index="${cardIndex}"]`
@@ -160,11 +159,74 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
-
-        // Добавляем обработчик события двойного клика
         icon.addEventListener("dblclick", function (event) {
             event.preventDefault();
             clickCount = 0;
         });
     });
 });
+
+
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    on: {
+        init: function () {
+            // Получаем индекс первого слайда (realIndex начинается с 0)
+            var firstSlideIndex = this.realIndex;
+
+            // Извлекаем текст заголовка из первого слайда
+            var titleText = $.trim($(this.slides[firstSlideIndex]).find("h3").text());
+            $(".title-hide-content span.title-hide-content").text(titleText);
+        },
+    },
+});
+
+$(".hide-block").click(function () {
+    $(".content-hide").fadeOut(300, function () {
+        $(".content-show").fadeIn(300);
+    });
+});
+
+$(".show-block").click(function () {
+    $(".content-show").fadeOut(300, function () {
+        $(".content-hide").fadeIn(300);
+    });
+});
+
+
+
+const showMoreButtons = document.querySelectorAll(".read-more-state");
+
+const modals = document.querySelectorAll(".modal");
+
+showMoreButtons.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+
+        modals[index].style.display = "block";
+    });
+});
+
+const closeButtons = document.querySelectorAll(".close");
+closeButtons.forEach(function (closeButton, index) {
+    closeButton.addEventListener("click", function () {
+        modals[index].style.display = "none";
+    });
+});
+
+modals.forEach(function (modal, index) {
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+

@@ -22,6 +22,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="/css/home.css" />
   </head>
   <body>
@@ -34,8 +39,6 @@
               style="height: 100%"
               src="img/logo.png"
               alt="logo"
-              width="100"
-              height="50"
             />
           </a>
 
@@ -78,7 +81,7 @@
 
       <div class="container" style="max-width: 1296px">
         <div class="row justify-content-center">
-          <div class="col-md-6 mb-5 links">
+          <div class="links-show col-md-6 mb-5 links">
             <ul class="nav nav-pills">
               <li class="nav-item">
                 <a
@@ -110,147 +113,259 @@
               </li>
             </ul>
           </div>
-        </div>
 
-        <!-- Контент блока "Airdrops" -->
-        <div class="content" id="airdrops-content">
-          <div class="content-hide justify-content-center news-card">
-            <div class="airdrop-block col-md-6">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <div class="airdrop-date" id="current-time"></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="airdrop-details">
-                      <h3>
-                        Title - Starknet is a decentralized Validity-Rollup
-                      </h3>
-                      <p>
-                        Starknet is a decentralized Validity-Rollup (often
-                        referred to as ZK-Rollup). It operates as a Layer 2
-                        network over Ethereum. Starknet is a decentralized
-                        Validity-Rollup Starknet is a decentralized
-                        Validity-Rollup (often referred to as ZK-Rollup). It
-                        operates as a Layer 2 network over Ethereum. Starknet is
-                        a decentralized Validity-Rollup
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 text-md-end">
-                  <div
-                    class="airdrop-controls d-flex align-items-center justify-content-between"
-                  >
-                    <div class="hide-block">
-                      <span><img src="/img/hide-arr.svg" alt="hide" /></span
-                      >Hide
-                    </div>
-                    <div class="slide-indicator">
-                      1/3
-                      <span
-                        ><img src="/img/arrow-right.svg" alt="arrow-right"
-                      /></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="airdrop-icon">
-                <img
-                  src="/img/newsImage.png"
-                  alt="Airdrop Icon"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="content-show mb-lg-4">
-            <div
-              class="toggle-button d-flex align-items-center justify-content-between"
+          <div class="links-hide col-md-6 mb-5 links">
+            <section
+              class="splide"
+              id="first-slider"
+              aria-label="Splide Basic HTML Example"
             >
-              <div class="content-show-head">
-                <span class="arrow-icon show-block">
-                  <img src="/img/arrow-show.svg" alt="arrow-show-icon" />
-                  <button>Show</button>
-                </span>
-                <span class="separator">|</span>
-                <span class="title">AirdropHunter’s NEWS</span>
-              </div>
-              <div class="title-hide-content">
-                <span class="title-hide-content">Title</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="navigation">
-            <section class="splide" aria-label="Splide Basic HTML Example">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="/img/Venom.svg" alt="logo" data-card-index="0" />
+                    <a
+                      class="nav-link category-link active"
+                      href="#airdrops-content"
+                      >Airdrops</a
+                    >
                   </li>
                   <li class="splide__slide">
-                    <img src="/img/zkSync.svg" alt="logo" data-card-index="1" />
+                    <a class="nav-link category-link" href="#stats-content"
+                    >Stats</a
+                  >
                   </li>
                   <li class="splide__slide">
-                    <img
-                      src="/img/Metamask.svg"
-                      alt="logo"
-                      data-card-index="2"
-                    />
+                    <a class="nav-link category-link" href="#news-content">News</a>
                   </li>
                   <li class="splide__slide">
-                    <img
-                      src="/img/LayerZero.svg"
-                      alt="logo"
-                      data-card-index="3"
-                    />
+                    <a class="nav-link category-link" href="#referrals-content"
+                    >Referrals</a
+                  >
                   </li>
                   <li class="splide__slide">
-                    <img
-                      src="/img/StarkNet.svg"
-                      alt="logo"
-                      data-card-index="4"
-                    />
+                    <a class="nav-link category-link" href="#nodes-content"
+                  >Nodes</a
+                >
                   </li>
                   <li class="splide__slide">
-                    <img
-                      src="/img/Polygon zkEVM.svg"
-                      alt="logo"
-                      data-card-index="5"
-                    />
-                  </li>
-                  <li class="splide__slide">
-                    <img
-                      src="/img/Arbitrum Nova.svg"
-                      alt="logo"
-                      data-card-index="6"
-                    />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/DeBank.svg" alt="logo" data-card-index="7" />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/Scroll.svg" alt="logo" data-card-index="8" />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/Aleo.svg" alt="logo" data-card-index="9" />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/Zora.svg" alt="logo" data-card-index="10" />
+                    <a class="nav-link category-link" href="#new-content">New</a>
                   </li>
                 </ul>
                 <div class="icon-container"></div>
               </div>
             </section>
           </div>
+        </div>
+
+        <!-- Контент блока "Airdrops" -->
+        <div class="content" id="airdrops-content">
+          <div class="content-body">
+            <div class="content-head">
+              <div class="content-hide justify-content-center news-card">
+                <div class="airdrop-block col-md-6">
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="airdrop-date" id="current-time"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="airdrop-details">
+                          <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <h3>
+                                  Title - Starknet is a decentralized
+                                  Validity-Rollup
+                                </h3>
+                                <p>
+                                  Starknet is a decentralized Validity-Rollup
+                                  (often referred to as ZK-Rollup). It operates
+                                  as a Layer 2 network over Ethereum. Starknet
+                                  is a decentralized Validity-Rollup Starknet is
+                                  a decentralized Validity-Rollup (often
+                                  referred to as ZK-Rollup). It operates as a
+                                  Layer 2 network over Ethereum. Starknet is a
+                                  decentralized Validity-Rollup
+                                </p>
+                              </div>
+                              <div class="swiper-slide">
+                                <h3>
+                                  Title - Starknet is a decentralized
+                                  Validity-Rollup
+                                </h3>
+                                <p>
+                                  Starknet is a decentralized Validity-Rollup
+                                  (often referred to as ZK-Rollup). It operates
+                                  as a Layer 2 network over Ethereum. Starknet
+                                  is a decentralized Validity-Rollup Starknet is
+                                  a decentralized Validity-Rollup (often
+                                  referred to as ZK-Rollup). It operates as a
+                                  Layer 2 network over Ethereum. Starknet is a
+                                  decentralized Validity-Rollup
+                                </p>
+                              </div>
+                              <div class="swiper-slide">
+                                <h3>
+                                  Title - Starknet is a decentralized
+                                  Validity-Rollup
+                                </h3>
+                                <p>
+                                  Starknet is a decentralized Validity-Rollup
+                                  (often referred to as ZK-Rollup). It operates
+                                  as a Layer 2 network over Ethereum. Starknet
+                                  is a decentralized Validity-Rollup Starknet is
+                                  a decentralized Validity-Rollup (often
+                                  referred to as ZK-Rollup). It operates as a
+                                  Layer 2 network over Ethereum. Starknet is a
+                                  decentralized Validity-Rollup
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 text-md-end">
+                      <div
+                        class="airdrop-controls d-flex align-items-center justify-content-between"
+                      >
+                        <div class="hide-block">
+                          <span><img src="/img/hide-arr.svg" alt="hide" /></span
+                          >Hide
+                        </div>
+                        <div class="next-btns d-flex align-items-center gap-2">
+                          <div class="slide-indicator swiper-pagination"></div>
+                          <img
+                            class="swiper-button-next"
+                            src="/img/arrow-right.svg"
+                            alt="arrow-right"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="airdrop-icon">
+                    <img
+                      src="/img/newsImage.png"
+                      alt="Airdrop Icon"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-show mb-lg-4">
+                <div
+                  class="toggle-button d-flex align-items-center justify-content-between"
+                >
+                  <div class="content-show-head">
+                    <span class="arrow-icon show-block">
+                      <img src="/img/arrow-show.svg" alt="arrow-show-icon" />
+                      <button>Show</button>
+                    </span>
+                    <span class="separator">|</span>
+                    <span class="title">AirdropHunter’s NEWS</span>
+                  </div>
+
+                  <div class="title-hide-content">
+                    <span class="title-hide-content"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation">
+              <section
+                class="splide"
+                id="second-slider"
+                aria-label="Splide Basic HTML Example"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Venom.svg"
+                        alt="logo"
+                        data-card-index="0"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/zkSync.svg"
+                        alt="logo"
+                        data-card-index="1"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Metamask.svg"
+                        alt="logo"
+                        data-card-index="2"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/LayerZero.svg"
+                        alt="logo"
+                        data-card-index="3"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/StarkNet.svg"
+                        alt="logo"
+                        data-card-index="4"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Polygon zkEVM.svg"
+                        alt="logo"
+                        data-card-index="5"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Arbitrum Nova.svg"
+                        alt="logo"
+                        data-card-index="6"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/DeBank.svg"
+                        alt="logo"
+                        data-card-index="7"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Scroll.svg"
+                        alt="logo"
+                        data-card-index="8"
+                      />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="/img/Aleo.svg" alt="logo" data-card-index="9" />
+                    </li>
+                    <li class="splide__slide">
+                      <img
+                        src="/img/Zora.svg"
+                        alt="logo"
+                        data-card-index="10"
+                      />
+                    </li>
+                  </ul>
+                  <div class="icon-container"></div>
+                </div>
+              </section>
+            </div>
+          </div>
 
           <div class="airdrops-cards-news">
             <div
-              class="col-md-12 flex-wrap d-flex align-items-center justify-content-center gap-2"
+              class="col-md-12 flex-wrap d-flex align-items-center justify-content-between gap-2"
             >
               <!-- Карточка 1 -->
               <div class="card mb-4 col-md-4" data-card-index="0">
@@ -265,19 +380,29 @@
                   <h5 class="card-title">Venom</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-1" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-1" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -354,19 +479,29 @@
                   <h5 class="card-title">zkSync</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-2" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-2" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -443,19 +578,29 @@
                   <h5 class="card-title">Metamask</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-3" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-3" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -532,19 +677,29 @@
                   <h5 class="card-title">LayerZero</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-4" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-4" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -621,19 +776,29 @@
                   <h5 class="card-title">StarkNet</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-5" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-5" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -710,19 +875,29 @@
                   <h5 class="card-title">Polygon zkEVM</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-6" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-6" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -799,20 +974,29 @@
                   <h5 class="card-title">Arbitrum Nova</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-7" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-7" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
 
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
                     <div
@@ -888,20 +1072,29 @@
                   <h5 class="card-title">DeBank</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-8" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-8" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
 
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
                     <div
@@ -977,19 +1170,29 @@
                   <h5 class="card-title">Scroll</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-9" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-9" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
+
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
 
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
@@ -1066,20 +1269,29 @@
                   <h5 class="card-title">Aleo</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-10" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-10" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
 
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
                     <div
@@ -1155,20 +1367,29 @@
                   <h5 class="card-title">Zora</h5>
                 </div>
                 <div class="card-body">
-                  <input type="checkbox" class="read-more-state" id="post-11" />
-
                   <p class="card-text read-more-wrap">
                     About this project: Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.<span
-                      id="more"
-                      class="read-more-target"
-                      >Additional information about Metamask goes here.</span
-                    >
+                    cursus ante dapibus diam.
                   </p>
 
-                  <label for="post-11" class="read-more-trigger"></label>
+                  <button class="read-more-state" id="showModal">
+                    Show more
+                  </button>
 
+                  <!-- Модальное окно -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <h3>Info</h3>
+                      <span class="close" id="closeModal">&times;</span>
+                      <p class="modal-text">
+                        About this project: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer nec odio. Praesent
+                        libero. Sed cursus ante dapibus diam. Additional
+                        information about Metamask goes here.
+                      </p>
+                    </div>
+                  </div>
                   <div class="art-ai">
                     <h5 class="mb-3">On artificial AI:</h5>
                     <div
@@ -1276,6 +1497,7 @@
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/home.js"></script>
   </body>
 </html>
