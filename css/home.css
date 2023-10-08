@@ -687,7 +687,31 @@ tbody tr {
   .img-fluid {
     height: 100% !important;
   }
-  .airdrop-details p{
+  .airdrop-details p {
     margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .airdrop-details h3 {
+    font-size: 20px;
+  }
+
+  .airdrop-block{
+    padding: 20px 15px;
+  }
+
+  .airdrop-details p {
+    color: #999;
+    font-family: Inter;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 20px 15px 20px 15px;
+  }
+
+  .card-text{
+    font-size: 15px;
   }
 }

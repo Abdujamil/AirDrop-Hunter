@@ -54,20 +54,6 @@ var splide = new Splide('#first-slider', {
     type: 'loop',
     perPage: 7,
     perMove: 1,
-    // breakpoints: {
-    //     960: {
-    //         perPage: 11,
-    //     },
-    //     620: {
-    //         perPage: 8,
-    //     },
-    //     480: {
-    //         perPage: 6,
-    //     },
-    //     360: {
-    //         perPage: 4,
-    //     },
-    // }
 });
 splide.mount();
 
