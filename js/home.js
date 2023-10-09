@@ -1,4 +1,10 @@
 $(window).on('load', function () {
+    // По умолчанию скрываем все .content блоки
+    $(".content").hide();
+
+    // Показываем контент блока "Airdrops" по умолчанию
+    $("#airdrops-content").fadeIn(300); // Замените "#Airdrops" на селектор, который соответствует блоку Airdrops
+
     var activeTab = localStorage.getItem("activeTab");
     if (activeTab) {
         $(".category-link").removeClass("active");
@@ -22,7 +28,6 @@ $(window).on('load', function () {
         localStorage.setItem("activeTab", this.getAttribute("href"));
     });
 });
-
 
 $(".category-link").each(function () {
     var randomCount = Math.floor(Math.random() * 100);
