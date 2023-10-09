@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on('load', function () {
     var activeTab = localStorage.getItem("activeTab");
     if (activeTab) {
         $(".category-link").removeClass("active");
@@ -9,7 +9,6 @@ $(document).ready(function () {
     } else {
         $(".category-link:first").addClass("active");
     }
-
 
     $(".category-link").click(function (e) {
         e.preventDefault();
@@ -25,17 +24,12 @@ $(document).ready(function () {
 });
 
 
-// Генерация рандомных чисел для ссылок и добавление круглых бейджей
-$(document).ready(function () {
-    $(".category-link").each(function () {
-        var randomCount = Math.floor(Math.random() * 100);
-        var badgeClass = randomCount % 2 === 0 ? "active-badge" : "inactive-badge"; // Определяем класс в зависимости от рандомного числа
+$(".category-link").each(function () {
+    var randomCount = Math.floor(Math.random() * 100);
+    var badgeClass = randomCount % 2 === 0 ? "active-badge" : "inactive-badge";
 
-        // Добавляем бейдж с рандомным числом и классом
-        $(this).append('<span class="badge rounded-circle ' + badgeClass + '">' + randomCount + '</span>');
-    });
+    $(this).append('<span class="badge rounded-circle ' + badgeClass + '">' + randomCount + '</span>');
 });
-
 
 
 const updateTime = () => {
@@ -62,6 +56,9 @@ var splide = new Splide('#second-slider', {
     perPage: 19,
     perMove: 1,
     breakpoints: {
+        1200: {
+            perPage: 15,
+        },
         960: {
             perPage: 11,
         },
@@ -112,43 +109,41 @@ splide.on('click', (slide) => {
     activeSlide.style.backgroundColor = '';
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const icons = document.querySelectorAll(".splide__slide img");
-    const cards = document.querySelectorAll(".airdrops-cards-news .card");
+const icons = document.querySelectorAll(".splide__slide img");
+const cards = document.querySelectorAll(".airdrops-cards-news .card");
 
-    icons.forEach((icon) => {
-        let clickCount = 0;
+icons.forEach((icon) => {
+    let clickCount = 0;
 
-        icon.addEventListener("click", function () {
-            clickCount++;
+    icon.addEventListener("click", function () {
+        clickCount++;
 
-            if (clickCount === 2) {
-                cards.forEach((card) => {
-                    card.style.display = "block";
-                });
+        if (clickCount === 2) {
+            cards.forEach((card) => {
+                card.style.display = "block";
+            });
 
 
-                clickCount = 0;
-            } else {
-                const cardIndex = this.getAttribute("data-card-index");
+            clickCount = 0;
+        } else {
+            const cardIndex = this.getAttribute("data-card-index");
 
-                cards.forEach((card) => {
-                    card.style.display = "none";
-                });
-                if (cardIndex !== null) {
-                    const selectedCard = document.querySelector(
-                        `.airdrops-cards-news .card[data-card-index="${cardIndex}"]`
-                    );
-                    if (selectedCard) {
-                        selectedCard.style.display = "block";
-                    }
+            cards.forEach((card) => {
+                card.style.display = "none";
+            });
+            if (cardIndex !== null) {
+                const selectedCard = document.querySelector(
+                    `.airdrops-cards-news .card[data-card-index="${cardIndex}"]`
+                );
+                if (selectedCard) {
+                    selectedCard.style.display = "block";
                 }
             }
-        });
-        icon.addEventListener("dblclick", function (event) {
-            event.preventDefault();
-            clickCount = 0;
-        });
+        }
+    });
+    icon.addEventListener("dblclick", function (event) {
+        event.preventDefault();
+        clickCount = 0;
     });
 });
 
@@ -165,10 +160,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     on: {
         init: function () {
-            // Получаем индекс первого слайда (realIndex начинается с 0)
             var firstSlideIndex = this.realIndex;
-
-            // Извлекаем текст заголовка из первого слайда
             var titleText = $.trim($(this.slides[firstSlideIndex]).find("h3").text());
             $(".title-hide-content span.title-hide-content").text(titleText);
         },

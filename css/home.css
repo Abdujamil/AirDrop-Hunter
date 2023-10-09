@@ -73,7 +73,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.menu-btn:hover {
+  border: #3d8aff 1px solid;
 }
 
 .nav-item:hover path {
@@ -573,6 +577,18 @@ tbody tr {
   }
 }
 
+@media screen and (max-width: 1235px) {
+  .airdrop-details p {
+    margin-bottom: 58px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .airdrop-details p {
+    margin-bottom: 18px;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .navbar {
     flex-wrap: nowrap;
@@ -607,6 +623,9 @@ tbody tr {
 
   .news-card {
     flex-direction: column-reverse;
+  }
+  .airdrop-details p {
+    margin-bottom: 84px;
   }
 
   .content-body {
@@ -697,7 +716,7 @@ tbody tr {
     font-size: 20px;
   }
 
-  .airdrop-block{
+  .airdrop-block {
     padding: 20px 15px;
   }
 
@@ -711,7 +730,7 @@ tbody tr {
     padding: 20px 15px 20px 15px;
   }
 
-  .card-text{
+  .card-text {
     font-size: 15px;
   }
 }
