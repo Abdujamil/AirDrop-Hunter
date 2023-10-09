@@ -53,6 +53,7 @@ var splide = new Splide('#first-slider', {
     type: 'loop',
     perPage: 7,
     perMove: 1,
+    drag: true,
 });
 splide.mount();
 
@@ -60,6 +61,7 @@ var splide = new Splide('#second-slider', {
     type: 'loop',
     perPage: 19,
     perMove: 1,
+    drag: true,
     breakpoints: {
         1200: {
             perPage: 15,
